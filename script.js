@@ -6,8 +6,8 @@ function displayData(data) {
 
     console.log(data);
     surfLocation.innerHTML = data.associated.tideLocation.name;
-    minWaveSize.innerHTML = data.data.tides[0].height + data.associated.units.tideHeight;
-    maxWaveSize.innerHTML = data.data.tides[167].height + data.associated.units.tideHeight;
+    minWaveSize.innerHTML = data.associated.tideLocation.max + data.associated.units.tideHeight;
+    maxWaveSize.innerHTML = data.associated.tideLocation.min + data.associated.units.tideHeight;
 }
 
 // Pretty much on start up, we fetch the data using the Surfline API
